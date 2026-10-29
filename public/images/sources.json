@@ -1,0 +1,115 @@
+{
+  "description": "Illustrative stock photography, not physical VelvetAura inventory. Resized and encoded as WebP without content alterations.",
+  "provider": "Unsplash",
+  "license": "https://unsplash.com/license",
+  "images": {
+    "/images/linen-shirt.webp": {
+      "small": "/images/linen-shirt-small.webp",
+      "width": 1200,
+      "height": 960,
+      "source": "https://images.unsplash.com/photo-1598033129183-c4f50c736f10"
+    },
+    "/images/city-blazer.webp": {
+      "small": "/images/city-blazer-small.webp",
+      "width": 1200,
+      "height": 1680,
+      "source": "https://images.unsplash.com/photo-1747814965209-2301e535f209"
+    },
+    "/images/essential-knit.webp": {
+      "small": "/images/essential-knit-small.webp",
+      "width": 1200,
+      "height": 1722,
+      "source": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105"
+    },
+    "/images/tailored-trousers.webp": {
+      "small": "/images/tailored-trousers-small.webp",
+      "width": 1200,
+      "height": 1800,
+      "source": "https://images.unsplash.com/photo-1473966968600-fa801b869a1a"
+    },
+    "/images/weekend-shirt.webp": {
+      "small": "/images/weekend-shirt-small.webp",
+      "width": 1200,
+      "height": 1798,
+      "source": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c"
+    },
+    "/images/evening-dress.webp": {
+      "small": "/images/evening-dress-small.webp",
+      "width": 1200,
+      "height": 1441,
+      "source": "https://images.unsplash.com/photo-1595777457583-95e059d581b8"
+    },
+    "/images/classic-coat.webp": {
+      "small": "/images/classic-coat-small.webp",
+      "width": 1200,
+      "height": 1800,
+      "source": "https://images.unsplash.com/photo-1604914509286-abc02036617c"
+    },
+    "/images/relaxed-tee.webp": {
+      "small": "/images/relaxed-tee-small.webp",
+      "width": 1200,
+      "height": 1200,
+      "source": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab"
+    },
+    "/images/denim-jacket.webp": {
+      "small": "/images/denim-jacket-small.webp",
+      "width": 1200,
+      "height": 900,
+      "source": "https://images.unsplash.com/photo-1543076447-215ad9ba6923"
+    },
+    "/images/soft-cardigan.webp": {
+      "small": "/images/soft-cardigan-small.webp",
+      "width": 1200,
+      "height": 1800,
+      "source": "https://images.unsplash.com/photo-1532373179750-cbe69d40161e"
+    },
+    "/images/summer-dress.webp": {
+      "small": "/images/summer-dress-small.webp",
+      "width": 1200,
+      "height": 1798,
+      "source": "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446"
+    },
+    "/images/daily-denim.webp": {
+      "small": "/images/daily-denim-small.webp",
+      "width": 1200,
+      "height": 960,
+      "source": "https://images.unsplash.com/photo-1542272604-787c3835535d"
+    },
+    "/images/editorial-hero.webp": {
+      "small": "/images/editorial-hero-small.webp",
+      "width": 1467,
+      "height": 2200,
+      "source": "https://images.unsplash.com/photo-1625519205691-1b6b7b24622e"
+    },
+    "/images/editorial-women.webp": {
+      "small": "/images/editorial-women-small.webp",
+      "width": 1200,
+      "height": 1797,
+      "source": "https://images.unsplash.com/photo-1559127452-829071a09516"
+    },
+    "/images/editorial-men.webp": {
+      "small": "/images/editorial-men-small.webp",
+      "width": 1200,
+      "height": 1800,
+      "source": "https://images.unsplash.com/photo-1575862469264-0a2e53494cdf"
+    },
+    "/images/editorial-story.webp": {
+      "small": "/images/editorial-story-small.webp",
+      "width": 1200,
+      "height": 800,
+      "source": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d"
+    },
+    "/images/editorial-soft.webp": {
+      "small": "/images/editorial-soft-small.webp",
+      "width": 1200,
+      "height": 1695,
+      "source": "https://images.unsplash.com/photo-1516762689617-e1cffcef479d"
+    },
+    "/images/editorial-wardrobe.webp": {
+      "small": "/images/editorial-wardrobe-small.webp",
+      "width": 1200,
+      "height": 800,
+      "source": "https://images.unsplash.com/photo-1445205170230-053b83016050"
+    }
+  }
+}

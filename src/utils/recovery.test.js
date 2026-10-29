@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {cleanCart,cleanWishlist} from './persistence.js';
+import {passwordIssue,safeReturnPath} from './auth.js';
+const products=[{id:'shirt',price:2000,sizes:['S','M'],colors:['Ivory']}];
+test('malformed cart values cannot crash startup',()=>assert.deepEqual(cleanCart([null,4,{}, {id:'missing'}],products),[]));
+test('stored quantities are merged, bounded and repriced from catalogue',()=>{const c=cleanCart([{id:'shirt',size:'S',color:'Ivory',quantity:7,price:1},{id:'shirt',size:'S',color:'Ivory',quantity:8}],products);assert.equal(c.length,1);assert.equal(c[0].quantity,10);assert.equal(c[0].price,2000)});
+test('wishlists discard stale and duplicate IDs',()=>assert.deepEqual(cleanWishlist(['shirt','shirt','missing',null],products),['shirt']));
+test('redirects reject external URLs and login loops',()=>{for(const p of ['//evil.example','https://evil.example','/\\evil.example','/login',null])assert.equal(safeReturnPath(p),'/account');assert.equal(safeReturnPath('/cart'),'/cart')});
+test('password policy respects UTF-8 byte limits',()=>{assert.ok(passwordIssue('short'));assert.ok(passwordIssue('💛'.repeat(19)));assert.equal(passwordIssue('a-unique-long-passphrase'),'')});

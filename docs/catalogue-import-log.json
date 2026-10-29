@@ -1,0 +1,39 @@
+{
+  "imported": 560,
+  "counts": {
+    "men-accessories": 20,
+    "men-casual-shirts": 20,
+    "men-co-ord-sets": 20,
+    "men-ethnic-occasion": 20,
+    "men-formal-shirts": 20,
+    "men-formalwear": 20,
+    "men-hoodies-sweatshirts": 20,
+    "men-jackets-outerwear": 20,
+    "men-jeans-denim": 20,
+    "men-linen-shirts": 20,
+    "men-polo-t-shirts": 20,
+    "men-shorts": 20,
+    "men-t-shirts": 20,
+    "men-trousers-chinos": 20,
+    "women-accessories": 20,
+    "women-activewear": 20,
+    "women-co-ord-sets": 20,
+    "women-dresses": 20,
+    "women-ethnic-occasion": 20,
+    "women-jackets-outerwear": 20,
+    "women-jeans-denim": 20,
+    "women-knitwear": 20,
+    "women-loungewear": 20,
+    "women-shirts-blouses": 20,
+    "women-skirts": 20,
+    "women-t-shirts": 20,
+    "women-tops": 20,
+    "women-trousers": 20
+  },
+  "rejectedImages": [
+    {
+      "id": "21733668",
+      "error": "HTTP Error 503: Service Unavailable"
+    }
+  ]
+}

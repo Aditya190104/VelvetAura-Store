@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {filterProducts,itemKey,subtotal,money} from './shop.js';
+const products=[{name:'Linen Shirt',gender:'Men',category:'Shirts',price:2490,popularity:10,newness:1,tag:'NEW'},{name:'Soft Knit',gender:'Women',category:'Knitwear',price:3290,popularity:20,newness:2,tag:'BESTSELLER'},{name:'Oxford Shirt',gender:'Men',category:'Shirts',price:2290,popularity:30,newness:3,tag:'NEW'}];
+test('combines gender, category, price and case insensitive search',()=>assert.deepEqual(filterProducts(products,{gender:'Men',category:'Shirts',q:'  LINEN ',max:2500}).map(p=>p.name),['Linen Shirt']));
+test('sorts numerically without mutating catalog',()=>{assert.deepEqual(filterProducts(products,{sort:'low'}).map(p=>p.price),[2290,2490,3290]);assert.equal(products[0].name,'Linen Shirt')});
+test('new and bestseller edits select appropriate pieces',()=>{assert.equal(filterProducts(products,{edit:'new'}).length,2);assert.equal(filterProducts(products,{edit:'best'})[0].name,'Soft Knit')});
+test('no matching products returns empty state',()=>assert.equal(filterProducts(products,{q:'not present'}).length,0));
+test('cart totals account for quantity',()=>assert.equal(subtotal([{price:2490,quantity:2},{price:1290,quantity:3}]),8850));
+test('variants have distinct keys',()=>assert.notEqual(itemKey('shirt','S','White'),itemKey('shirt','M','White')));
+test('INR formatting',()=>assert.equal(money(2490),'₹2,490'));

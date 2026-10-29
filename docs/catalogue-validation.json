@@ -1,0 +1,212 @@
+{
+  "checkedAt": "2026-10-24T07:03:40.625929+00:00",
+  "totalProducts": 572,
+  "newProducts": 560,
+  "categoryCounts": [
+    {
+      "department": "Men",
+      "category": "T-shirts",
+      "id": "men-t-shirts",
+      "route": "/shop/men/t-shirts",
+      "count": 21
+    },
+    {
+      "department": "Men",
+      "category": "Polo T-shirts",
+      "id": "men-polo-t-shirts",
+      "route": "/shop/men/polo-t-shirts",
+      "count": 20
+    },
+    {
+      "department": "Men",
+      "category": "Casual Shirts",
+      "id": "men-casual-shirts",
+      "route": "/shop/men/casual-shirts",
+      "count": 21
+    },
+    {
+      "department": "Men",
+      "category": "Formal Shirts",
+      "id": "men-formal-shirts",
+      "route": "/shop/men/formal-shirts",
+      "count": 20
+    },
+    {
+      "department": "Men",
+      "category": "Linen Shirts",
+      "id": "men-linen-shirts",
+      "route": "/shop/men/linen-shirts",
+      "count": 21
+    },
+    {
+      "department": "Men",
+      "category": "Jeans and Denim",
+      "id": "men-jeans-denim",
+      "route": "/shop/men/jeans-denim",
+      "count": 20
+    },
+    {
+      "department": "Men",
+      "category": "Trousers and Chinos",
+      "id": "men-trousers-chinos",
+      "route": "/shop/men/trousers-chinos",
+      "count": 21
+    },
+    {
+      "department": "Men",
+      "category": "Shorts",
+      "id": "men-shorts",
+      "route": "/shop/men/shorts",
+      "count": 20
+    },
+    {
+      "department": "Men",
+      "category": "Hoodies and Sweatshirts",
+      "id": "men-hoodies-sweatshirts",
+      "route": "/shop/men/hoodies-sweatshirts",
+      "count": 20
+    },
+    {
+      "department": "Men",
+      "category": "Jackets and Outerwear",
+      "id": "men-jackets-outerwear",
+      "route": "/shop/men/jackets-outerwear",
+      "count": 21
+    },
+    {
+      "department": "Men",
+      "category": "Co-ord Sets",
+      "id": "men-co-ord-sets",
+      "route": "/shop/men/co-ord-sets",
+      "count": 20
+    },
+    {
+      "department": "Men",
+      "category": "Ethnic and Occasion Wear",
+      "id": "men-ethnic-occasion",
+      "route": "/shop/men/ethnic-occasion",
+      "count": 20
+    },
+    {
+      "department": "Men",
+      "category": "Formalwear",
+      "id": "men-formalwear",
+      "route": "/shop/men/formalwear",
+      "count": 20
+    },
+    {
+      "department": "Men",
+      "category": "Accessories",
+      "id": "men-accessories",
+      "route": "/shop/men/accessories",
+      "count": 20
+    },
+    {
+      "department": "Women",
+      "category": "Tops",
+      "id": "women-tops",
+      "route": "/shop/women/tops",
+      "count": 20
+    },
+    {
+      "department": "Women",
+      "category": "T-shirts",
+      "id": "women-t-shirts",
+      "route": "/shop/women/t-shirts",
+      "count": 20
+    },
+    {
+      "department": "Women",
+      "category": "Shirts and Blouses",
+      "id": "women-shirts-blouses",
+      "route": "/shop/women/shirts-blouses",
+      "count": 20
+    },
+    {
+      "department": "Women",
+      "category": "Dresses",
+      "id": "women-dresses",
+      "route": "/shop/women/dresses",
+      "count": 22
+    },
+    {
+      "department": "Women",
+      "category": "Jeans and Denim",
+      "id": "women-jeans-denim",
+      "route": "/shop/women/jeans-denim",
+      "count": 21
+    },
+    {
+      "department": "Women",
+      "category": "Trousers",
+      "id": "women-trousers",
+      "route": "/shop/women/trousers",
+      "count": 20
+    },
+    {
+      "department": "Women",
+      "category": "Skirts",
+      "id": "women-skirts",
+      "route": "/shop/women/skirts",
+      "count": 20
+    },
+    {
+      "department": "Women",
+      "category": "Knitwear",
+      "id": "women-knitwear",
+      "route": "/shop/women/knitwear",
+      "count": 22
+    },
+    {
+      "department": "Women",
+      "category": "Jackets and Outerwear",
+      "id": "women-jackets-outerwear",
+      "route": "/shop/women/jackets-outerwear",
+      "count": 22
+    },
+    {
+      "department": "Women",
+      "category": "Co-ord Sets",
+      "id": "women-co-ord-sets",
+      "route": "/shop/women/co-ord-sets",
+      "count": 20
+    },
+    {
+      "department": "Women",
+      "category": "Ethnic and Occasion Wear",
+      "id": "women-ethnic-occasion",
+      "route": "/shop/women/ethnic-occasion",
+      "count": 20
+    },
+    {
+      "department": "Women",
+      "category": "Activewear",
+      "id": "women-activewear",
+      "route": "/shop/women/activewear",
+      "count": 20
+    },
+    {
+      "department": "Women",
+      "category": "Loungewear",
+      "id": "women-loungewear",
+      "route": "/shop/women/loungewear",
+      "count": 20
+    },
+    {
+      "department": "Women",
+      "category": "Accessories",
+      "id": "women-accessories",
+      "route": "/shop/women/accessories",
+      "count": 20
+    }
+  ],
+  "uniquePrimaryPhotos": 572,
+  "imageManifestEntries": 586,
+  "webpFilesDecoded": 1172,
+  "embeddedFallbacksDecoded": 586,
+  "productsWithGalleries": 4,
+  "imageReview": "All 28 primary-photo contact sheets and seven replacement photos reviewed; colours corrected and misclassified/near-identical selections replaced.",
+  "dataMode": "Local demonstration prices, sizes and stock; reference product photography, not live retail inventory.",
+  "errors": [],
+  "passed": true
+}

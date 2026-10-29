@@ -1,0 +1,18 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import bcrypt from 'bcrypt';
+import {loadConfig} from '../src/config.js';
+import {register,profile,password} from '../src/validation.js';
+import {token,digest,equal,publicUser,sessions} from '../src/security.js';
+import {Session} from '../src/models.js';
+const env={MONGODB_URI:'mongodb://localhost/velvetaura_test',APP_ORIGIN:'http://localhost:5173'};
+test('production rejects insecure origins',()=>assert.throws(()=>loadConfig({...env,NODE_ENV:'production'})));
+test('incomplete SMTP and insecure SameSite=None fail configuration',()=>{assert.throws(()=>loadConfig({...env,SMTP_HOST:'example.com'}));assert.throws(()=>loadConfig({...env,COOKIE_SAME_SITE:'none'}));assert.equal(loadConfig(env).mailEnabled,false)});
+test('registration and profile reject role escalation',()=>{assert.equal(register.safeParse({name:'Person',email:'person@example.com',password:'a-unique-passphrase',role:'admin'}).success,false);assert.equal(profile.safeParse({name:'Person',role:'admin'}).success,false)});
+test('NoSQL operator objects are rejected',()=>assert.equal(register.safeParse({name:'Person',email:{$ne:null},password:'a-unique-passphrase'}).success,false));
+test('password validation enforces length and bytes',()=>{assert.equal(password.safeParse('short').success,false);assert.equal(password.safeParse('💛'.repeat(19)).success,false);assert.equal(password.safeParse('a-unique-passphrase').success,true)});
+test('opaque tokens have unique values and safe comparisons',()=>{const a=token(),b=token();assert.equal(a.length,64);assert.notEqual(a,b);assert.notEqual(a,digest(a));assert.equal(equal(a,b),false);assert.equal(equal(a,a),true);assert.equal(equal(a,undefined),false)});
+test('public responses exclude password and recovery hashes',()=>{const user=publicUser({_id:'1',name:'Person',passwordHash:'secret',resetHash:'secret',authVersion:2});assert.equal(user.passwordHash,undefined);assert.equal(user.resetHash,undefined);assert.equal(user.authVersion,undefined)});
+test('CSRF and role checks reject unauthorized mutations',()=>{const auth=sessions(loadConfig(env));const req={session:{csrf:'valid'},get:k=>k==='origin'?'https://evil.example':'valid',is:()=>true};assert.throws(()=>auth.csrf(req,{},()=>{}),e=>e.status===403);req.get=k=>k==='origin'?env.APP_ORIGIN:'invalid';assert.throws(()=>auth.csrf(req,{},()=>{}),e=>e.code==='CSRF_INVALID');assert.throws(()=>auth.requireAdmin({user:{role:'customer'}},{},()=>{}),e=>e.status===403)});
+test('session rotation uses secure production cookie and hashed token',async(t)=>{let deleted,created,cookie;t.mock.method(Session,'deleteOne',async q=>{deleted=q});t.mock.method(Session,'create',async value=>{created=value;return{_id:'new',...value}});const auth=sessions(loadConfig({...env,NODE_ENV:'production',APP_ORIGIN:'https://shop.example.com'}));await auth.rotate({session:{_id:'old'}},{cookie:(name,value,options)=>{cookie={name,value,options}}},{_id:'user',authVersion:2});assert.deepEqual(deleted,{_id:'old'});assert.equal(cookie.name,'__Host-va_session');assert.equal(cookie.options.secure,true);assert.equal(cookie.options.httpOnly,true);assert.equal(cookie.options.domain,undefined);assert.equal(created.tokenHash,digest(cookie.value));assert.equal(created.authVersion,2)});
+test('bcrypt verifies only the original password',async()=>{const p='a-unique-passphrase',h=await bcrypt.hash(p,10);assert.notEqual(p,h);assert.equal(await bcrypt.compare(p,h),true);assert.equal(await bcrypt.compare('incorrect',h),false)});
